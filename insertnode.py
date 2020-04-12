@@ -11,7 +11,7 @@ class Linked_list():
         self.head=None
 
 
-    def print_list(self):
+    def printList(self):
     	cur_node=self.head
         while cur_node:
             print(cur_node.data)
@@ -35,7 +35,7 @@ class Linked_list():
         self.head=new_node
         
         
-    def insert_index (self, index, data):
+    def insertIndex (self, index, data):
         if index == 1:
             new_node = Node(data)
             new_node.next = self.head
@@ -53,7 +53,7 @@ class Linked_list():
             last_node.next = new_node
         
         
-    def insert_node(self,prev_node,data):
+    def insertNode(self,prev_node,data):
         if not prev_node:
             print("previous node is not in the list")
             return None
