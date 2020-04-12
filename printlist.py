@@ -11,7 +11,6 @@ class Linked_list():
         self.head=None
 
 
-
     def print_list(self):
     	cur_node=self.head
         while cur_node:
