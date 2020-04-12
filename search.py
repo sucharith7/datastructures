@@ -11,13 +11,11 @@ class Linked_list():
         self.head=None
 
 
-
     def print_list(self):
     	cur_node=self.head
         while cur_node:
             print(cur_node.data)
             cur_node=cur_node.next
-
 
 
     def append(self, data):
@@ -30,7 +28,6 @@ class Linked_list():
             last_node=last_node.next
         last_node.next=new_node
         
-
 
     def prepend(self,data):
         new_node=Node(data)
@@ -55,6 +52,7 @@ class Linked_list():
             new_node.next = last_node.next
             last_node.next = new_node
         
+        
     def insert_node(self,prev_node,data):
         if not prev_node:
             print("previous node is not in the list")
@@ -66,18 +64,17 @@ class Linked_list():
         
     def Delete_node(self,key):
         cur_node=self.head
-        if cur_node and cur_node.next==key:
+        if cur_node and cur_node.data==key:
             self.head=cur_node.next
             cur_node=None
         prev=None
-        while cur_node and cur_node.next != key:
+        while cur_node and cur_node.data != key:
             prev=cur_node
             cur_node=cur_node.next
         if cur_node is None:
             return None
         prev.next=cur_node.next
         cur_node=None
-        
         
         
     def search(file,word):
