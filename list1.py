@@ -11,7 +11,7 @@ class Linked_list():
         self.head=None
 
 
-    def print_list(self):
+    def printList(self):
         cur_node=self.head
         while cur_node:
             print(cur_node.data)
@@ -35,7 +35,7 @@ class Linked_list():
         self.head=new_node
         
         
-    def insert_index (self, index, data):
+    def insertIndex (self, index, data):
         if index == 1:
             new_node = Node(data)
             new_node.next = self.head
@@ -53,7 +53,7 @@ class Linked_list():
             last_node.next = new_node
         
 
-    def insert_node(self,prev_node,data):
+    def insertNode(self,prev_node,data):
         if not prev_node:
             print("previous node is not in the list")
             return None
@@ -62,7 +62,7 @@ class Linked_list():
         prev_node.next=new_node
         
         
-    def Delete_node(self,key):
+    def deleteNode(self,key):
         cur_node=self.head
         if cur_node and cur_node.data==key:
             self.head=cur_node.next
@@ -94,17 +94,17 @@ class Linked_list():
         print(text)
         for word in text:
             self.append(word)
-        self.print_list()
+        self.printList()
         word1=input("enter a word:")
         if self.search(text,word1):
-            self.Delete_node(word1)
+            self.deleteNode(word1)
             print("removed")
-            self.print_list()
+            self.printList()
         else:
             pos=int(input("pos:"))
-            self.insert_index(pos,word1)
+            self.insertIndex(pos,word1)
             print("added")
-            self.print_list()
+            self.printList()
 
 
 llist=Linked_list()
