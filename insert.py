@@ -11,7 +11,7 @@ class Linked_list():
         self.head=None
 
 
-    def print_list(self):
+    def printList(self):
     	cur_node=self.head
         while cur_node:
             print(cur_node.data)
@@ -35,7 +35,7 @@ class Linked_list():
         self.head=new_node
         
         
-    def insert_index (self, index, data):
+    def insertIndex (self, index, data):
         if index == 1:
             new_node = Node(data)
             new_node.next = self.head
